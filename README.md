@@ -1,15 +1,40 @@
-# Windows Docker/Kubernetes Cheatsheet
-Quick referrence list of useful commands aggregated across docker, kubectl, minikube specifically for Windows systems.
+# Windows 10 Pro - Docker/Kubernetes Cheatsheet
+Quick referrence list of useful commands aggregated across docker, kubectl, minikube specifically for Windows 10 Pro systems.
 
 ## Docker
 
-  #### Commands
+  #### Installation:
+
+  https://docs.docker.com/docker-for-windows/install/
+
+  #### Additional Configuration:
+
+  Docker's default settings for the VM can be a little on the light side, depending what you are trying to do. You can adjust the defaults by following these few simple steps. I had to do this originally because of
+  the size require to compile a larger Angular application.
+
+  1. Navigate to and open
+  ```PowerShell
+  C:\Users<profile name>\AppData\Roaming\Docker\settings.json
+  ```
+  2. Adjust the `memoryMib` value to be something more practical, like `4096`
+
+  I also recommend you remove Docker Desktop from your start up programs list on Windows, or it will create the VM, hogging system resources whenever the machine starts.
+
+  1. Search `Startup Apps` in the Windows Task Bar.
+  2. Select `Startup Apps`.
+  3. Turn `Docker Desktop` to off.
+
+  #### Commands:
 
   <pending>
 
 ## KubtCtl
 
-  #### Commands
+  #### Installation:
+
+  See MiniKube Installation
+
+  #### Commands:
 
   Get information about current Kubernetes resources, providing a name is optional
 
@@ -17,10 +42,14 @@ Quick referrence list of useful commands aggregated across docker, kubectl, mini
 
 ## MiniKube
 
+  #### Installation:
+
+  https://kubernetes.io/docs/tasks/tools/install-minikube/
+
   #### Additional Configuration Steps:
 
   MiniKube has some default values that are not all that useful for Windows users. You can follow these short steps to override the defaults with more
-  common settings.
+  common settings. We need the switch that minikube is on do be able to access the public interent. We also want minikube to use hyperv by default, as it comes with Windows 10 Pro, and is more managable than VirtualBox. We also want a more practical memory value for this VM, so we can adjust the default value for that as well.
 
   1. Navigate to and open: 
   ```PowerShell
@@ -36,7 +65,7 @@ Quick referrence list of useful commands aggregated across docker, kubectl, mini
   ```
   3. Adjust the memory value as needed, preferrably limiting to the bare minimum required.
 
-  #### Commands
+  #### Commands:
 
   Configure docker to build images inside the minikube VM instead of the Docker VM (so they can be used by minikube).
 
