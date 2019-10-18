@@ -17,7 +17,9 @@ MiniKube has some default values that are not all that useful for Windows users.
 common settings.
 
   1. Navigate to: 
-  `C:\Users\<your profile name>\.minikube\config.json`
+  ```PowerShell
+    C:\Users\<your profile name>\.minikube\config.json
+  ```
   2. Add the following JSON:
   ```JSON
     {
