@@ -28,9 +28,20 @@ Quick referrence list of useful commands aggregated across docker, kubectl, mini
   2. Select `Startup Apps`.
   3. Turn `Docker Desktop` to off.
 
+  I highly recomend using the Visual Studio Code extension for Docker. It allows for circumventing writing a lot of these longer commands with quick `Ctrl + Shift + P` and GUI shortcuts.
+
+  1. Open Visual Studio Code.
+  2. Go to the Extensions area.
+  3. Search `Docker`.
+  4. Select and install the `Docker` extension.
+
   #### Commands:
 
-  <pending>
+  Build a Docker image from the the specified docker file (-f) with the following tagged (-t) name and version (name:version) from the following location (.). This example is being called from the location the docker file exists, inside a project directory. 
+
+  ```PowerShell
+  docker build --rm -f "my.prod.dockerfile" -t app-name:0.0.1 .
+  ```
 
 ## KubtCtl
 
