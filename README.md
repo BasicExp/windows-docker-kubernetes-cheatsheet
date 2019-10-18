@@ -3,10 +3,6 @@ Quick referrence list of useful commands aggregated across docker, kubectl, mini
 
 ## Docker
 
-  #### Mid Level YouTube Walk Through:
-
-  https://www.youtube.com/watch?v=cLT7eUWKZpg&t=2494s
-
   #### Installation:
 
   https://docs.docker.com/docker-for-windows/install/
@@ -35,6 +31,10 @@ Quick referrence list of useful commands aggregated across docker, kubectl, mini
   3. Search `Docker`.
   4. Select and install the `Docker` extension.
 
+  #### Mid Level YouTube Walk Through:
+
+  https://www.youtube.com/watch?v=cLT7eUWKZpg&t=2494s
+
   #### Commands:
 
   Build a Docker image from the the specified docker file (-f) with the following tagged (-t) name and version (name:version) from the following location (.). This example is being called from the location the docker file exists, inside a project directory, which is why the path is '.'. 
@@ -51,13 +51,13 @@ Quick referrence list of useful commands aggregated across docker, kubectl, mini
 
 ## KubtCtl
 
-  #### Interactive Kubernetes Tutorial:
-
-  https://kubernetes.io/docs/tutorials/kubernetes-basics/create-cluster/cluster-intro/ 
-
   #### Installation:
 
   See MiniKube Installation
+
+  #### Interactive Kubernetes Tutorial:
+
+  https://kubernetes.io/docs/tutorials/kubernetes-basics/create-cluster/cluster-intro/ 
 
   #### Commands:
 
