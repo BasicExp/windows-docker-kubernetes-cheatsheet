@@ -3,6 +3,10 @@ Quick referrence list of useful commands aggregated across docker, kubectl, mini
 
 ## Docker
 
+  #### Mid Level YouTube Walk Through:
+
+  https://www.youtube.com/watch?v=cLT7eUWKZpg&t=2494s
+
   #### Installation:
 
   https://docs.docker.com/docker-for-windows/install/
@@ -29,6 +33,10 @@ Quick referrence list of useful commands aggregated across docker, kubectl, mini
   <pending>
 
 ## KubtCtl
+
+  #### Interactive Kubernetes Tutorial:
+
+  https://kubernetes.io/docs/tutorials/kubernetes-basics/create-cluster/cluster-intro/ 
 
   #### Installation:
 
