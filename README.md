@@ -22,19 +22,19 @@ Quick referrence list of useful commands aggregated across docker, kubectl, mini
   MiniKube has some default values that are not all that useful for Windows users. You can follow these short steps to override the defaults with more
   common settings.
 
-    1. Navigate to and open: 
-    ```PowerShell
-      C:\Users\<your profile name>\.minikube\config.json
-    ```
-    2. Add the following JSON:
-    ```JSON
-      {
-        "hyperv-virtual-switch": "Public Access Switch",
-        "memory": 8152,
-        "vm-driver": "hyperv"
-      }
-    ```
-    3. Adjust the memory value as needed, preferrably limiting to the bare minimum required.
+  1. Navigate to and open: 
+  ```PowerShell
+    C:\Users\<your profile name>\.minikube\config.json
+  ```
+  2. Add the following JSON:
+  ```JSON
+    {
+      "hyperv-virtual-switch": "Public Access Switch",
+      "memory": 8152,
+      "vm-driver": "hyperv"
+    }
+  ```
+  3. Adjust the memory value as needed, preferrably limiting to the bare minimum required.
 
   #### Commands
 
