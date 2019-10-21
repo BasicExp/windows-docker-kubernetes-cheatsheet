@@ -63,7 +63,9 @@ Quick referrence list of useful commands aggregated across docker, kubectl, mini
 
   Get information about current Kubernetes resources, providing a name is optional
 
-    `kubectl get pods | nodes | deployments <name>`
+  ```PowerShell
+  kubectl get pods | nodes | deployments <name>
+  ```
 
 ## MiniKube
 
