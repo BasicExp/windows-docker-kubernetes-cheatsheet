@@ -94,12 +94,17 @@ Quick referrence list of useful commands aggregated across docker, kubectl, mini
 
   Configure docker to build images inside the minikube VM instead of the Docker VM (so they can be used by minikube).
 
-    `minikube docker-env | Invoke-Expression`
-
+  ```PowerShell
+  minikube docker-env | Invoke-Expression
+  ```
   Start a Kubernetes cluster with a single node running on a virtual machine
 
-    `minikube start`
+  ```PowerShell
+  minikube start
+  ```
 
   Delete the current minikube cluster, destroying the VM and everything stored on its virtual disk.
 
-    `minikube delete`
+  ```PowerShell
+  minikube delete
+  ```
