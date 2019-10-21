@@ -37,16 +37,46 @@ Quick referrence list of useful commands aggregated across docker, kubectl, mini
 
   #### Commands:
 
+  Get a complete list of commands and options.di
+  
+  ```PowerShell
+  docker --help
+  ```
+
+  List all running containers
+  
+  ```PowerShell
+  docker ps
+  ```
+
   Build a Docker image from the the specified docker file (-f) with the following tagged (-t) name and version (name:version) from the following location (.). This example is being called from the location the docker file exists, inside a project directory, which is why the path is '.'. 
 
   ```PowerShell
   docker build --rm -f "my.prod.dockerfile" -t app-name:0.0.1 .
   ```
 
+  Run a given container in detached mode (-d) where the current console is not linked to standard output of the container. Map the physical machine port (-p) to the container port. Automatically remove the container on exit (--rm).
+
+  ```PowerShell
+  docker run --rm -d -p 443:443/tcp -p 80:80/tcp <name>
+  ```
+
   Remove wasted space from partially compilled or unused containers on the Virtual Machine docker is running on.
 
   ```PowerShell
   docker system prune
+  ```
+
+  See what images are available for Docker to run in your local repository.
+
+  ```PowerShell
+  docker images
+  ```
+
+  Open a shell by executing the bash command in interactive mode (-i) with a psuedo terminale (-t) for a given container.
+
+  ```PowerShell
+  docker exec -it <name/id> bash
   ```
 
 ## KubtCtl
@@ -65,6 +95,12 @@ Quick referrence list of useful commands aggregated across docker, kubectl, mini
 
   ```PowerShell
   kubectl get pods | nodes | deployments <name>
+  ```
+
+  Run a container from a certain image on a give port.
+
+  ```PowerShell
+  kubectl run <name> --image=name:version --port=8080
   ```
 
 ## MiniKube
@@ -94,7 +130,7 @@ Quick referrence list of useful commands aggregated across docker, kubectl, mini
 
   #### Commands:
 
-  Configure docker to build images inside the minikube VM instead of the Docker VM (so they can be used by minikube).
+  Configure docker to build images inside the minikube VM instead of the Docker VM (so they can be used by minikube). All docker commands will execute in reference to the Kubernetes machine. (ie. docker images will show the images available on the kubernetes vm, not the docker vm)
 
   ```PowerShell
   minikube docker-env | Invoke-Expression
