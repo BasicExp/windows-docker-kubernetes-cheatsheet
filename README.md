@@ -128,6 +128,14 @@ Quick referrence list of useful commands aggregated across docker, kubectl, mini
   ```
   3. Adjust the memory value as needed, preferrably limiting to the bare minimum required.
 
+  In addition, the Public Access Switch by default is a virtual switch that exists when Hyper-V is enabled. When using a wired connection, access to the internet will function correctly, and MiniKube will be able to download the resources it needs when spinning up the machine for the first time. However, if MiniKube tries to download resources while you are on WiFi connection, your NAC (Network Access Card) will require the ability to 'share hosts'. You can check to see if your NAC has this ability by running the following PowerShell command.
+
+  ```PowerShell
+  netsh wlan show dirvers
+  ```
+
+  Check the line 'hosted network support', that has to be a yes or you wont be able to bridge between the NAC and the virtual switch.
+
   #### Commands:
 
   Configure docker to build images inside the minikube VM instead of the Docker VM (so they can be used by minikube). All docker commands will execute in reference to the Kubernetes machine. (ie. docker images will show the images available on the kubernetes vm, not the docker vm)
