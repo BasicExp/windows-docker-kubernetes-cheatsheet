@@ -3,7 +3,7 @@ Quick referrence list of useful commands and need to know information aggregated
 
 ## Docker
 
-  #### Installation:
+  #### Installation Instructions:
 
   https://docs.docker.com/docker-for-windows/install/
 
@@ -81,7 +81,7 @@ Quick referrence list of useful commands and need to know information aggregated
 
 ## KubtCtl
 
-  #### Installation:
+  #### Installation Insturctions:
 
   See MiniKube Installation
 
@@ -121,7 +121,7 @@ Quick referrence list of useful commands and need to know information aggregated
 
 ## MiniKube
 
-  #### Installation:
+  #### Installation Instructions:
 
   https://kubernetes.io/docs/tasks/tools/install-minikube/
 
