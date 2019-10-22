@@ -37,7 +37,7 @@ Quick referrence list of useful commands aggregated across docker, kubectl, mini
 
   #### Commands:
 
-  Get a complete list of commands and options.di
+  Get a complete list of commands and options
   
   ```PowerShell
   docker --help
@@ -89,9 +89,13 @@ Quick referrence list of useful commands aggregated across docker, kubectl, mini
 
   https://kubernetes.io/docs/tutorials/kubernetes-basics/create-cluster/cluster-intro/ 
 
+  ### Kubernetes YAML File Creation
+
+  https://www.mirantis.com/blog/introduction-to-yaml-creating-a-kubernetes-deployment/
+
   #### Commands:
 
-  Get information about current Kubernetes resources, providing a name is optional
+  Get information about current Kubernetes resources, providing a name is optional. You can also use 'describe' for more detailed information, instead of 'get'.
 
   ```PowerShell
   kubectl get pods | nodes | deployments <name>
@@ -100,8 +104,19 @@ Quick referrence list of useful commands aggregated across docker, kubectl, mini
   Run a container from a certain image on a give port.
 
   ```PowerShell
-  kubectl run <name> --image=name:version --port=8080
+  kubectl run <name> --image=name:version --port=80
   ```
+
+  Create a Kubernetes resource (pod, service, etc) from a file. You can string multiple -f tags together for multiple files.
+
+  ```PowerShell
+  kubectl create -f resource.yaml
+  ```
+
+  Delete a Kubernetes resource (pod, service, etc)
+
+  ```PowerShell
+  kubectl delete  pod | service | deployment <name>
 
 ## MiniKube
 
@@ -134,7 +149,7 @@ Quick referrence list of useful commands aggregated across docker, kubectl, mini
   netsh wlan show dirvers
   ```
 
-  Check the line 'hosted network support', that has to be a yes or you wont be able to bridge between the NAC and the virtual switch.
+  Check the line 'hosted network support', that has to be a yes or you wont be able to bridge your internet connection between the NAC and the virtual switch.
 
   #### Commands:
 
@@ -153,4 +168,10 @@ Quick referrence list of useful commands aggregated across docker, kubectl, mini
 
   ```PowerShell
   minikube delete
+  ```
+
+  Enable Cluster IP address tunnneling, which you enable in order to use the 'LoadBalancer' type service with MiniKube.
+
+  ```PowerShell
+  minikube tunnel
   ```
