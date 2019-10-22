@@ -144,13 +144,13 @@ Quick referrence list of useful commands and need to know information aggregated
   ```
   3. Adjust the memory value as needed, preferrably limiting to the bare minimum required.
 
-  In addition, the Public Access Switch by default is a virtual switch that exists when Hyper-V is enabled. When using a wired connection, access to the internet will function correctly, and MiniKube will be able to download the resources it needs when spinning up the machine for the first time. However, if MiniKube tries to download resources while you are on WiFi connection, your NAC (Network Access Card) will require the ability to 'share hosts'. You can check to see if your NAC has this ability by running the following PowerShell command.
+  In addition, the Public Access Switch by default is a virtual switch that exists when Hyper-V is enabled. When using a wired connection, access to the internet will function correctly, allowing MiniKube to download the resources it needs when spinning up the virtual maching. However, if MiniKube tries to download resources while you are on a WiFi connection, your NAC (Network Access Card) will require the ability to 'share hosts'. You can check to see if your NAC has this ability by running the following PowerShell command.
 
   ```PowerShell
   netsh wlan show dirvers
   ```
 
-  Check the line 'hosted network support', that has to be a yes or you wont be able to bridge your internet connection between the NAC and the virtual switch.
+  Check the line 'hosted network support', and that it says 'yes' or you wont be able to bridge your internet connection between the NAC and the virtual switch. If this is the case, always use a wired connection.
 
   #### Commands:
 
