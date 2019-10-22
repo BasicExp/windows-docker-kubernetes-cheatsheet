@@ -117,6 +117,7 @@ Quick referrence list of useful commands and need to know information aggregated
 
   ```PowerShell
   kubectl delete  pod | service | deployment <name>
+  ```
 
 ## MiniKube
 
