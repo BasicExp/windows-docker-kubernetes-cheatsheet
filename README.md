@@ -79,6 +79,12 @@ Quick referrence list of useful commands and need to know information aggregated
   docker exec -it <name/id> bash
   ```
 
+  Remove a specific image version from your repository
+
+  ```PowerShell
+  docker rmi <name:version>
+  ```
+
 ## KubtCtl
 
   #### Installation Insturctions:
