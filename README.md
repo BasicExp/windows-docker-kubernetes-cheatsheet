@@ -104,7 +104,7 @@ Quick referrence list of useful commands and need to know information aggregated
   Get information about current Kubernetes resources, providing a name is optional. You can also use 'describe' for more detailed information, instead of 'get'.
 
   ```PowerShell
-  kubectl get pods | nodes | deployments <name>
+  kubectl get pods | nodes | deployments | services <name>
   ```
 
   Run a container from a certain image on a give port.
@@ -113,7 +113,7 @@ Quick referrence list of useful commands and need to know information aggregated
   kubectl run <name> --image=name:version --port=80
   ```
 
-  Create a Kubernetes resource (pod, service, etc) from a file. You can string multiple -f tags together for multiple files.
+  Create a Kubernetes resource (pod, service, etc) from a file. You can string multiple -f tags together for multiple files. You can also use the create command with flags to create resources, but with number of options you can work with, using a YAML file is a better overall UX.
 
   ```PowerShell
   kubectl create -f resource.yaml
@@ -122,7 +122,7 @@ Quick referrence list of useful commands and need to know information aggregated
   Delete a Kubernetes resource (pod, service, etc)
 
   ```PowerShell
-  kubectl delete  pod | service | deployment <name>
+  kubectl delete  pod | node | deployment | service <name>
   ```
 
 ## MiniKube
