@@ -55,7 +55,7 @@ Quick referrence list of useful commands and need to know information aggregated
   docker build --rm -f "my.prod.dockerfile" -t app-name:0.0.1 .
   ```
 
-  Push an image to a remote repository. These are usually a cloud service, but could be setup on an offline network. Tagging is what allows you to easily point your image to upload to correct place. You will also likely need to authenticate in some fashion using `docker login`, but this varies somewhat for each repository. They should have their own instructions on how to do this.
+  Push an image to a remote repository. These are usually a cloud service, but could be setup on an offline network. Tagging is what allows you to easily point your image to upload to correct place. You will also likely need to authenticate in some fashion using `docker login`, but this varies somewhat for each repository. They should have their own instructions on how to do this. If you push with no configuration or login, the default is to try to push your image to Docker Hub, which is public.
 
   ```PowerShell
   docker tag <image-name:version> <repository-path:version>
