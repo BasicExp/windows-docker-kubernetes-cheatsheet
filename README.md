@@ -135,6 +135,12 @@ Quick referrence list of useful commands and need to know information aggregated
   kubectl delete  pod | node | deployment | service <name>
   ```
 
+  Update the image (Rolling update) for a given deployment, for given container(s)
+
+  ```PowerShell
+  kubectl set image deployment\<deploymnet-name> <container-name>=<image>:<version>
+  ```
+
 ## MiniKube
 
   #### Installation Instructions:
@@ -163,7 +169,7 @@ Quick referrence list of useful commands and need to know information aggregated
   In addition, the Public Access Switch by default is a virtual switch that exists when Hyper-V is enabled. When using a wired connection, access to the internet will function correctly, allowing MiniKube to download the resources it needs when spinning up the virtual maching. However, if MiniKube tries to download resources while you are on a WiFi connection, your NAC (Network Access Card) will require the ability to 'share hosts'. You can check to see if your NAC has this ability by running the following PowerShell command.
 
   ```PowerShell
-  netsh wlan show dirvers
+  netsh wlan show drivers
   ```
 
   Check the line 'hosted network support', and that it says 'yes' or you wont be able to bridge your internet connection between the NAC and the virtual switch. If this is the case, always use a wired connection.
