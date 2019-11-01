@@ -71,6 +71,12 @@ Quick referrence list of useful commands and need to know information aggregated
   docker run --rm -d -p 443:443/tcp -p 80:80/tcp <name>
   ```
 
+  Stop a currently running container.
+
+  ```PowerShell
+  docker kill <container-name>
+  ```
+
   Remove wasted space from partially compilled or unused containers on the Virtual Machine docker is running on.
 
   ```PowerShell
