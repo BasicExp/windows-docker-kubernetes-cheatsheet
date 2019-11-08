@@ -105,7 +105,9 @@ Quick referrence list of useful commands and need to know information aggregated
 
   #### Installation Insturctions:
 
-  See MiniKube Installation
+  https://kubernetes.io/docs/tasks/tools/install-kubectl/
+
+  **NOTE:** If you are using the 'curl' command method in PowerShell, do not provide the command parameters `-LO`. The curl command is an alias in PowerShell for the Windows version of this command and they will cause the command to fail.
 
   #### Interactive Kubernetes Tutorial:
 
