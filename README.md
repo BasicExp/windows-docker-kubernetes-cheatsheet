@@ -115,6 +115,10 @@ Quick referrence list of useful commands and need to know information aggregated
 
   https://www.mirantis.com/blog/introduction-to-yaml-creating-a-kubernetes-deployment/
 
+  #### KubeCtl Documentation
+
+  https://kubectl.docs.kubernetes.io/
+
   #### Commands:
 
   Get information about current Kubernetes resources, providing a name is optional. You can also use 'describe' for more detailed information, instead of 'get'.
@@ -129,7 +133,15 @@ Quick referrence list of useful commands and need to know information aggregated
   kubectl run <name> --image=name:version --port=80
   ```
 
-  Create a Kubernetes resource (pod, service, etc) from a file. You can string multiple -f tags together for multiple files. You can also use the create command with flags to create resources, but with number of options you can work with, using a YAML file is a better overall UX.
+  Apply works much in the same way that 'create' works, however, when commands are made with apply, you can recall the command to update the resource after making changes to the YAML file. If you want to use apply to update pods, you should create them with apply as well. Kubernetes warns against making resources with 'create' and trying to run apply on them to update them.
+
+  ```PowerShell
+  kubectl apply -f resource.yaml
+  ```
+
+  Create a Kubernetes resource (pod, service, etc) from a file. You can string multiple -f tags together for multiple files. You can also use the create command with flags to create resources, but with number of options you can work with, using a YAML file is a better overall UX. 
+  
+  **WARNING:** Kubernetes strongly recommends using the 'apply' command in a production setting.
 
   ```PowerShell
   kubectl create -f resource.yaml
