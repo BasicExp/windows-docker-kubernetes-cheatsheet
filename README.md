@@ -1,4 +1,4 @@
-# Windows 10 Pro - Docker/Kubernetes Cheatsheet
+# Windows 10 Pro - Docker/Kubernetes Cheat Sheet
 Quick referrence list of useful commands and need to know information aggregated across docker, kubectl, minikube specifically for Windows 10 Pro systems.
 
 ## Docker
