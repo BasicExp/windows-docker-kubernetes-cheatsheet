@@ -35,6 +35,10 @@ Quick referrence list of useful commands and need to know information aggregated
 
   https://www.youtube.com/watch?v=cLT7eUWKZpg&t=2494s
 
+  #### Full Cheat Sheet
+
+  https://www.docker.com/sites/default/files/d8/2019-09/docker-cheat-sheet.pdf 
+
   #### Commands:
 
   Get a complete list of commands and options
@@ -120,6 +124,10 @@ Quick referrence list of useful commands and need to know information aggregated
   #### KubeCtl Documentation
 
   https://kubectl.docs.kubernetes.io/
+
+  #### Full Cheat Sheet
+
+  https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 
   #### Commands:
 
