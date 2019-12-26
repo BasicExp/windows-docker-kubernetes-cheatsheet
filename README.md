@@ -156,16 +156,16 @@ Create a Kubernetes resource (pod, service, etc) from a file. You can string mul
 
 **WARNING:** Kubernetes strongly recommends using the 'apply' command in a production setting.
 
+```PowerShell
+kubectl create -f resource.yaml
+```
+
 Run a command on a currently running pod in the k8s cluster.
 
 Most commonly used to run `bash`, but note, you have to have bash installed in order to run it, and most base images do not install bash. You might have to run a command to install bash first depending on the image running in your pod.
 
 ```PowerShell
 kubectl exec -it --namespace <namespace> <pod-name> <command>
-```
-
-```PowerShell
-kubectl create -f resource.yaml
 ```
 
 Delete a Kubernetes resource (pod, service, etc)
